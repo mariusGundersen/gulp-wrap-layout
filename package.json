@@ -1,0 +1,52 @@
+{
+  "name": "gulp-wrap-layout",
+  "version": "0.2.0",
+  "description": "A gulp plugin to wrap the stream contents with a lodash template.",
+  "keywords": [
+    "gulpplugin",
+    "wrap",
+    "template",
+    "lodash",
+    "gulp"
+  ],
+  "homepage": "https://github.com/mariusGundersen/gulp-wrap-layout",
+  "bugs": {
+    "url": "https://github.com/mariusGundersen/gulp-wrap-layout/issues"
+  },
+  "author": {
+    "name": "Marius Gundersen",
+    "email": "me@mariusgundersen.com",
+    "url": "https://github.com/mariusGundersen"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mariusGundersen/gulp-wrap-layout.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "event-stream": "*",
+    "ejs": "^0.8.5",
+    "gulp-util": "~2.2.13",
+    "node.extend": "~1.0.9",
+    "find-parent-dir": "^0.2.1",
+    "path": "^0.4.9"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0",
+    "should": "~2.1.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ],
+  "maintainers": [
+    {
+      "name": "mariusgundersen",
+      "email": "npm@mariusgundersen.net"
+    }
+  ]
+}

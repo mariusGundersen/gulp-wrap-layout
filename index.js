@@ -71,3 +71,5 @@ module.exports = function(opts, data){
 
   return es.map(wrap);
 };
+
+module.exports.ejs = ejs;

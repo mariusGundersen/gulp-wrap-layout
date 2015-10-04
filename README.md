@@ -1,6 +1,6 @@
-# gulp-wrap-layout [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
+# gulp-wrap-layout [![NPM version][npm-image]][npm-url]
 
-> A [gulp](https://github.com/gulpjs/gulp) plugin to wrap the stream contents with a [lodash](http://lodash.com/docs#template) template.
+> A [gulp](https://github.com/gulpjs/gulp) plugin to wrap the stream contents with an [ejs](https://www.npmjs.com/package/ejs) template.
 
 ## Usage
 
@@ -38,7 +38,7 @@ gulp.src("./src/*.json")
 var wrap = require("gulp-wrap-layout");
 
 gulp.src("./src/*.json")
-	.pipe(wrap('BEFORE <%= data.contents %> <%= data.someVar %> AFTER', { someVar: 'someVal'}, { variable: 'data' }))
+	.pipe(wrap('BEFORE <%= contents %> <%= data.someVar %> AFTER', { someVar: 'someVal'}, { variable: 'data' }))
 	.pipe(gulp.dest("./dist"));
 ```
 
@@ -65,12 +65,16 @@ The file location of the template.
 #### data
 Type: `Object`
 
-The data object that is passed on to the [lodash](http://lodash.com/docs#template) template call.
+The data object that is passed on to the [ejs](https://www.npmjs.com/package/ejs#example) template call.
 
 #### options
 Type: `Object`
 
-The options object that is passed on to the [lodash](http://lodash.com/docs#template) template call.
+The options object that is passed on to the [ejs](https://www.npmjs.com/package/ejs#example) template call.
+
+### wrap.ejs
+
+Access the [ejs](https://www.npmjs.com/package/ejs) object directly
 
 ## License
 
@@ -78,9 +82,3 @@ The options object that is passed on to the [lodash](http://lodash.com/docs#temp
 
 [npm-url]: https://npmjs.org/package/gulp-wrap-layout
 [npm-image]: https://badge.fury.io/js/gulp-wrap-layout.png
-
-[travis-url]: http://travis-ci.org/adamayres/gulp-wrap-layout
-[travis-image]: https://secure.travis-ci.org/adamayres/gulp-wrap-layout.png?branch=master
-
-[depstat-url]: https://david-dm.org/adamayres/gulp-wrap-layout
-[depstat-image]: https://david-dm.org/adamayres/gulp-wrap-layout.png
